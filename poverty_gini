@@ -1,0 +1,25 @@
+#load the necessary packages
+library(tidyverse)
+library(readxl)
+
+#I happen to have downloaded the file from World Bank Open Data
+#Since I will focus on the Indonesian data, I have removed the other countries
+#Considering irregular completeness of the data, I limit the observation only from the year 1999 to year 2020
+
+#change the work directory to where the file is located in
+setwd("C:/Users/brend/Documents/Data analytics course/For portfolio")
+#import the excel, we will name it gini_poverty
+gini_poverty <- read_excel("C:/Users/brend/Documents/Data analytics course/For portfolio/gini_poverty.xls")
+
+#have a look at the data
+gini_poverty
+#there are 22 observations (year 1999 to 2020), with 3 variables: year, gini index, and poverty index
+
+#visualize
+ggplot(data = gini_poverty, mapping = aes(x = Year))+
+  geom_point(aes(y = GINI, color = "Gini Index"))+
+  geom_point(aes(y = Poverty, color = "Poverty Index"))+
+  xlab("Year") + ylab("Index value")+
+  scale_color_manual(values = c("red", "blue"))+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+#it appears that poverty index has decreased in more than the last ten years. However, the Gini index tend to be the opposite. Although it did show a decrease since 2016
