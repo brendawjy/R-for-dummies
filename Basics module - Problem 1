@@ -9,3 +9,5 @@ college <- read.csv("College.csv")
 #note that if you just write read.csv("College.csv"), it will be printed immediately in your console (which can be quite messy) and isn't stored as a dataset yet
 #so remember to always store your imported data as a dataset
 
+#have a quicklook at your dataset
+view(college) #this will open a window above the R console (if you're using RStudio). As someone who is used to Excel and now struggling to learn about coding, i find this function very pleasant
