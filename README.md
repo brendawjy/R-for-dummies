@@ -13,7 +13,7 @@ I do realize that I am far from skilled in these tools, hence my journey is divi
 
 Along the way, I found this course by Chicago Booth. They provide resources to learn R and Stata for data science purposes (they even mention "Data Science for Research Assistant" :"))
 
-Here's the website [(https://canvas.uchicago.edu/courses/43117)]
+Here's the website [](https://canvas.uchicago.edu/courses/43117)
 
 I would say this course is quite beginner friendly. I will try to do the exercises and post the results here. They do have the solution for every practice problems though. But anyway it never hurts to do it by yourself
 
