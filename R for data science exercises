@@ -1,0 +1,15 @@
+Chapter 1: Data Visualization with ggplot2
+Exercise on page 6:
+1. Run ggplot(data = mpg). What do you see?
+Answer: Nothing, this just tells ggplot that the datasource is a dataset called mpg
+
+2. How many rows are in mtcars? How many columns?
+
+3. What does the drv variable describe? Read the help for ?mpg to
+find out.
+4. Make a scatterplot of hwy versus cyl.
+
+Codes:
+library(tidyverse) #load the necessary package
+data(mtcars) #to load the mpg dataset
+summary(mtcars) #to check out some basic statistics (mean, median, min, max) about each variable
