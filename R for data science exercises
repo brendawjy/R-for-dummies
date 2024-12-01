@@ -1,15 +1,35 @@
 Chapter 1: Data Visualization with ggplot2
+
 Exercise on page 6:
 1. Run ggplot(data = mpg). What do you see?
 Answer: Nothing, this just tells ggplot that the datasource is a dataset called mpg
 
 2. How many rows are in mtcars? How many columns?
+Answer: dim(mtcars); the result is 32 rows (observations) and 11 columns (variables)
 
-3. What does the drv variable describe? Read the help for ?mpg to
-find out.
+3. What does the drv variable describe? Read the help for ?mpg to find out.
+Answer: ?mpg; drv: the type of drive train, where f = front-wheel drive, r = rear wheel drive, 4 = 4wd
+
 4. Make a scatterplot of hwy versus cyl.
+ggplot(data=mpg)+
+geom_point(mapping=aes(x=cyl, y=hwy)
+
+5. What happens if you make a scatterplot of class versus drv? Why is the plot not useful?
+there is still scatterplot, but not meaningful, because both class and drv are character variables
 
 Codes:
-library(tidyverse) #load the necessary package
-data(mtcars) #to load the mpg dataset
+#load the necessary package
+library(tidyverse) 
+library(ggplot2)
+
+#to answer the second question
+data(mtcars) #to load the mtcars dataset
 summary(mtcars) #to check out some basic statistics (mean, median, min, max) about each variable
+dim(mtcars) #to get the dimension (number of rows and columns) of the dataset
+
+#to answer the 3rd and 4th question
+data(mpg) #to load the mpg dataset
+?mpg #to get some information about the variables in mpg dataset
+#cyl is number of cylinders, hwy is highway miles per gallon (showing fuel's efficiency on the highway)
+ggplot(data=mpg)
+geom_point(mapping=aes(x=cyl, y=hwy)
