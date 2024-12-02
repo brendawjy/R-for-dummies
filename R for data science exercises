@@ -33,3 +33,7 @@ data(mpg) #to load the mpg dataset
 #cyl is number of cylinders, hwy is highway miles per gallon (showing fuel's efficiency on the highway)
 ggplot(data=mpg)
 geom_point(mapping=aes(x=cyl, y=hwy)
+
+#to answer the 5th question
+ggplot(data=mpg)
+geom_point(mapping=aes(x=class, y=drv)
